@@ -4,18 +4,33 @@ using UnityEngine;
 
 public class Logic : MonoBehaviour {
 
+    public GameObject img;
+    
 	// Use this for initialization
 	void Start () {
         
     }
 
-    private void FixedUpdate()
-    {
-        Debug.Log("FixUpdate time !" + Time.deltaTime);
-    }
-
     // Update is called once per frame
     void Update () {
-        Debug.Log("Fix time !" + Time.deltaTime);
+
+        
+        if (Input.GetKey(KeyCode.F))
+        {
+            if (img != false)
+            {
+                img.SetActive(true);
+            }
+            
+            
+            
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            img.GetComponent<Renderer>().material.color = Color.blue;
+        }
+
+        
 	}
 }
