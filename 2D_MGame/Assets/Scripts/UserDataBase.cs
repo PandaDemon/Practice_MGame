@@ -23,16 +23,16 @@ public class UserDataBase : MonoBehaviour {
         while (reader.Read())
         {
             int id = reader.GetInt32(0);
-            string Name = reader.GetInt32(1);
-            string Email = reader.GetInt32(2);
+            string Name = reader.GetString(1);
+            string Email = reader.GetString(2);
 
-            Debug.Log("value = " + id + "name " + Name + "email" + Email);
+            Debug.Log("value = " + id + " name " + Name + " email " + Email);
         }
         reader.Close();
         reader = null;
         dbcmd.Dispose();
         dbcmd = null;
-        dbconn.Close;
+        dbconn.Close();
         dbconn = null;
 	}
 	
