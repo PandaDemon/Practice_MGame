@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Gamefunction : MonoBehaviour {
+public class GameFunction : MonoBehaviour {
 
 	public void ExitGame()
     {
